@@ -1,0 +1,69 @@
+<div class="line"></div>
+<label class="downloading-label">Downloading<span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span></label>
+
+<style>
+.line {
+  width: 100%;
+  height: 10px;
+  background-color:black;
+  position: relative;
+  border-radius:1px;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #11ff00;
+  animation: adjustColor 50s linear infinite;
+}
+
+@keyframes adjustColor {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.downloading-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dot-1,
+.dot-2,
+.dot-3 {
+  animation: dots 1.5s infinite;
+  opacity: 0;
+}
+
+.dot-1 {
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  animation-delay: 0.5s;
+}
+
+.dot-3 {
+  animation-delay: 1s;
+}
+
+@keyframes dots {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+</style>
+

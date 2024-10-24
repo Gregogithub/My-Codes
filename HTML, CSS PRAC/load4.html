@@ -1,0 +1,32 @@
+<div class="line"></div>
+<h3>Downloading....</h3>
+<style>
+.line {
+  width: 100%;
+  height: 10px;
+  background-color:black;
+  position: relative;
+  border-radius:10px;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #11ff00;
+  animation: adjustColor 5s linear infinite;
+}
+
+@keyframes adjustColor {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+</style>
+

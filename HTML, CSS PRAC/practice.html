@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>
+
+      login page
+
+    </title>
+</head>
+
+  <body>
+     <div class="p">
+    <p>LOGIN PAGE</p>
+     </div>
+    <div class="placeholder">
+
+            
+
+      <div class="textarea">
+
+      <div class="email">
+
+      <label for="Email">Enter email:<br></label>
+
+      <input type="text" name="Email" required>
+
+      </div>
+      <div class="password">
+      <br>
+      <label for="password">Enter Password:<br></label>
+      <input type="password" name="password"  required> 
+      <br>
+      </div>
+      <br> <button id="btn">Sign up</button>
+      <style>
+      .placeholder {
+          border:solid;
+          border-radius:20px;
+          padding-left:50px;
+          border-color:red;
+          padding-top:30px;
+          padding-bottom:30px;
+          animation:tri 5s linear infinite;
+          animation-delay:0s
+          animation-iteration-count:infinite;  
+          animation-play-state:running;                }
+
+           @keyframes tri {
+        0% {
+    
+          background-color: blue;
+          transform:rotatex(40deg);
+          transform:translate(20,50);
+            }
+        100%
+         {
+    
+           background-color: lime;
+           opacity:1;
+           transform: rotateX(20deg);  
+           transform:translate(20px,50px);
+          }
+          }
+             
+      .textarea {
+          padding-left:50px;
+          color:white;
+                } 
+     .p{
+          text-align:center ;
+          padding-right:15px;
+          font-family:arial;
+          font-weight:bold;
+          color:red;
+          font-size:40px;
+          animation:animate_text 1s steps(3) infinite;
+         }
+      @keyframes animate_text
+         {
+       0%,100%
+   
+       {
+    opacity:0%;
+    
+       }
+     50%
+     {
+    opacity:1;
+       }
+       }
+ button{
+     border-radius:5px;
+     animation: fill1 0.5s linear infinite;
+     
+  
+}
+
+@keyframes fill1 {
+  0% {
+    
+    background-color: blue;
+  }
+  100% {
+   
+    background-color: red;
+    opacity:1;
+  }
+}
+
+      </style
+    </div>
+    </div>
+<script>
+      document.getElementById("btn").onclick = function() {
+         alert("Signed up successfully!✅️")
+      }
+</script>
+</body>
+</html>

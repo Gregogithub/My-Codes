@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+lights
+</title>
+</head>
+<body>
+<h2>FLASHLIGHTS</h2>
+<div class="tr">
+<div class="p"><p>HAPPY BIRTHDAY GREG</p></div>
+<div class="circle-container">
+<div class="circle"></div>
+</div>
+<br><div class="circle-containers"><p> 
+  <div class="circles"></div>
+</div>
+<br><div class="circle-contain">
+  <div class="circ"></div>
+</div>
+</div>
+<style>
+.p{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:50px;
+    color:red;
+    padding-bottom:200px;
+    animation:animate_text 0.5s steps(1) infinite;
+}
+@keyframes animate_text
+{
+    0%,100%
+   
+{
+    opacity:0%;
+}
+50%
+{
+    opacity:1;
+}
+}
+ 
+.tr{
+    border:solid ;
+    border-color:red;
+    padding-top:0px;    
+    padding-left:0px;
+    display:flex;
+    animation:tri 0.5s linear infinite;
+   
+    
+}
+
+@keyframes tri {
+  0% {
+    
+    background-color: blue;
+  }
+  100% {
+    
+    background-color: lime;
+    opacity:1;
+  }
+}
+.circle-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  border-radius: 50%;
+  animation: fill1 0.5s linear infinite;
+  
+}
+
+@keyframes fill1 {
+  0% {
+    transform: rotate(0deg);
+    background-color: blue;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: red;
+    opacity:1;
+  }
+}
+
+.circle-containers {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  border-radius: 50%;
+  animation: download 0.5s linear infinite;
+  
+}
+
+@keyframes download {
+  0% {
+    transform: rotate(0deg);
+    background-color: purple;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: orange;
+    opacity:1;
+  }
+}
+.circle-contain {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.circ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  border-radius: 50%;
+  animation: fill 0.5s linear infinite;
+  
+}
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+    background-color: brown;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: green;
+    opacity:1;
+  }
+}
+
+  
+</style>
+</body>
+</html>

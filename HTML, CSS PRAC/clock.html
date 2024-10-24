@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    
+</head>
+<body>
+    <div class="clock">
+        <div id="time"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 5em;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+</style>
+<sript>
+function updateTime() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    // Add leading zeros if the values are less than 10
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+
+    // Build the time string
+    var timeString = hours + ":" + minutes + ":" + seconds;
+
+    // Update the time display
+    document.getElementById("time").innerHTML = timeString;
+}
+
+// Update the time every second
+setInterval(updateTime, 1000);
+</sript>

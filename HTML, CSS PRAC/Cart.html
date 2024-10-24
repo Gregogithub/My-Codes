@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+</head>
+<body>
+    <div class="img">
+<img src="logo.jpg">
+  </div>
+<button onclick="console.log('Cart quantity: 
+${cartQuantity}')
+">Show Quantity</button>
+<button onclick="cartQuantity=cartQuantity+1;
+console.log('cart quantity:${cartQuantity}')
+">Add to cart</button>
+<button onclick="cartQuantity=cartQuantity+2;
+console.log('cart quantity:${cartQuantity}')
+">+2</button>
+<button onclick="cartQuantity=cartQuantity+3;
+console.log('cart quantity:${cartQuantity}')
+">+3</button>
+<button id="btn" onclick="cartQuantity=0;
+console.log('cart quantity:${cartQuantity}')
+">Remove</button>
+<style>
+button{
+    background-color:yellow;
+    border-radius:50px;
+    font-size:18px;
+    hoover:.3s ease;
+    display:inline block;}
+body{
+    margin:0px;
+    background-color:lime;}
+p{
+    color:red;
+    font-size:20px;
+    text-align:center
+    }
+    .img{
+        width: 150px;
+        length: 150px;
+        border: radius 750px;
+        float:inline-start;
+    }
+
+</style>
+<script>
+let cartQuantity =0;
+document.getElementById("btn").onclick = function(){
+         alert("Removed successfully! ✅️")
+         }
+</script>
+</body>
+</html>

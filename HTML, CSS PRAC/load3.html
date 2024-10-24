@@ -1,0 +1,30 @@
+<div class="loader"></div>
+ <style>
+ .loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  animation: download 1.5s linear infinite;
+}
+
+@keyframes download {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: #3498db;
+  }
+}
+
+ </style>
+ 
+ 
+
+

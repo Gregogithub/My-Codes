@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fingerprint Biometrics</title>
+  <style>
+  #fingerprintCanvas {
+  border: 1px solid #000;
+  margin: 20px;
+}
+
+#captureButton {
+  padding: 10px 20px;
+  margin: 20px;
+}
+  </style>
+</head>
+<body>
+  <canvas id="fingerprintCanvas"></canvas>
+  <button id="captureButton">Capture Fingerprint</button>
+
+  <script src="script.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+  const fingerprintCanvas = document.getElementById('fingerprintCanvas');
+  const captureButton = document.getElementById('captureButton');
+  const context = fingerprintCanvas.getContext('2d');
+
+  // Set canvas size
+  fingerprintCanvas.width = 300;
+  fingerprintCanvas.height = 300;
+
+  captureButton.addEventListener('click', () => {
+    captureFingerprint();
+  });
+
+  function captureFingerprint() {
+    // Simulate capturing fingerprint data
+    const fingerprintData = generateRandomFingerprintData();
+
+    // Process fingerprint data
+    processFingerprint(fingerprintData);
+  }
+
+  function generateRandomFingerprintData() {
+    // Generate random fingerprint data
+    // Replace this with your actual fingerprint capturing logic
+    const randomData = Math.random().toString(36).substr(2, 6);
+    return randomData;
+  }
+
+  function processFingerprint(fingerprintData) {
+    // Process fingerprint data
+    context.clearRect(0, 0, fingerprintCanvas.width, fingerprintCanvas.height);
+    context.font = '24px Arial';
+    context.fillText(`Fingerprint: ${fingerprintData}`, 20, 150);
+  }
+});
+
+  </script>
+</body>
+</html>
